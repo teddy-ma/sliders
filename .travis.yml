@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- 5.10.1
+script:
+- git config --global user.email "mlc880926@gmail.com"
+- git config --global user.name "Ma Lucheng"
+- git config --global push.default simple
+- npm install
+- npm run build
+- git remote add upstream "https://${GH_TOKEN}@github.com/teddy-ma/sliders.git"
+- git fetch upstream
+- git reset upstream/gh-pages
+- git add -A .
+- git commit -m "update from travis"
+- git push -q upstream HEAD:gh-pages
+env:
+  global:
+    secure: ryqjzaJ515le+X+b5p05b4eBSuBIGKWyLKAyoOCdyDl+RlH1mnrLrnbthYAB3GWSWXu+YWzkX6KXFiE3WrQmTGVCjvNyJWgAnMQkocP3iDdbRj8QN3+ZVfUEWT7sz5qR6xmdBSxByvHkyzGFCwHIXVHOnzChC07QzR8QArqCoVqA+gOWSJubGus7jVE0ljCx6Du+iDR4O8pf57cFTy3fbJPbXi76Llx6181+o2T1weHXDfxWZmKWxVtrxJsFqV5KWbULNSMu//txBHdFEEwM2EjSWBpq2/WXSeRK/vadAM0hkhcNbLK1TWDBozhLwP/4hVWclRNM4sF4LacVGaDid5eu+cPjQn+FtGbVP/8PV+cxopsAaD77ZDYnfRLNwJaLXReC1QrarIS6/BLWRTT3N53UhAPSaP5cNrQ/lKAy1K+ycfw8EyWXhVsrFivHU7yBTKenzBUtI8wJxQWrBSw3aW3t0wEe3l/mOMYwGE2u7VgPded0aof3GPky0f4ofstP4/p6HoWuuDoPKxXwL30QqG6diITz9Yz9+Yk3Inw9kYWXR5EXika5Y5Eue/m+PV/4eFV4UrTmNg/GXOfBdDnC7s2yP879zuKznLFrLIYJjzhJTn2AU86O9/Br5UdKqR4VHeh94B4HFF+0JekSeeK/NuQFwK+xNDQfI0FLQYDjHDU=

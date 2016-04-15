@@ -1,6 +1,6 @@
 # Beyond Rails (理论篇)
 
-the next generation architecture for the new world
+the next generation architecture for the new world!
 
 author: 马陆骋 <malucheng@boohee.com>
 
