@@ -11,22 +11,28 @@
     git clone https://github.com/teddy-ma/sliders.git
     cd sliders
 
-### 安装依赖并构建(确保 node 环境已安装)
+### 安装依赖(确保 node 环境已安装)
 
     npm install
-    edit src/xxx.md
+
+### 编辑 slider
+
+在 `src` 目录下新建 `xxx.md` 文件, 然后
+
     npm run build
 
-### 清理构建
+来生成 html. 或者使用
 
-    npm run clean
+    npm run watch
+
+实时修改
 
 ### 预览
 
     npm run preview
 
-## TODO
+然后访问 http://localhost:8000/
 
-+ livereload
-+ CI
-+ index page
+### 清理构建
+
+    npm run clean
