@@ -24,3 +24,9 @@
 ### 预览
 
     npm run preview
+
+## TODO
+
++ livereload
++ CI
++ index page

@@ -1,10 +1,10 @@
 {
   "name": "sliders",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "''",
   "scripts": {
-    "build": "node_modules/webpack/bin/webpack.js --progress --colors --watch",
+    "build": "node build.js",
     "preview": "node_modules/http-server/bin/http-server -a localhost -p 8000",
     "clean": "node clean.js"
   },
@@ -34,6 +34,7 @@
     "http-server": "^0.8.5"
   },
   "dependencies": {
+    "mkdirp": "^0.5.1",
     "rimraf": "^2.5.2"
   }
 }
