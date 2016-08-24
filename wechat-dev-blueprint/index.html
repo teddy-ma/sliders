@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>微信开发蓝皮书</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../templates/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../templates/revealjs/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../templates/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../templates/revealjs/css/print/pdf.css' : '../templates/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides"><section  data-markdown><script type="text/template"># 微信开发蓝皮书
+
+author: 马陆骋&lt;malucheng@boohee.com&gt;
+</script></section><section  data-markdown><script type="text/template">
+## 目录
+
+- 微信是什么
+- 微信能做什么
+- 开发微信需要的准备
+- 微信开发的技术要求
+
+</script></section><section  data-markdown><script type="text/template">
+## 微信是什么?
+
+> 微信 (WeChat)[1]  是腾讯公司于2011年1月21日推出的一个为智能终端提供即时通讯服务的免费应用程序，[1]  微信支持跨通信运营商、跨操作系统平台通过网络快速发送免费（需消耗少量网络流量）语音短信、视频、图片和文字，同时，也可以使用通过共享流媒体内容的资料和基于位置的社交插件“摇一摇”、“漂流瓶”、“朋友圈”、”公众平台“、”语音记事本“等服务插件。
+</script></section><section  data-markdown><script type="text/template">
+## 微信能做什么
+
+任何传统 web 上可以做的事情都可以搬到微信上:
+
+- 餐饮行业
+- 房产置业
+- 婚庆影楼
+- 教育培训
+- 酒店宾馆
+- 景区旅游
+- 掌上汽车
+- 订单外卖
+- 医疗保健
+
+</script></section><section  data-markdown><script type="text/template">
+## 微信还能做什么
+
+微信是一个平台, 可以认为它是一个封闭的定制浏览器.
+
+不考虑封闭性带来的坏处, 使用微信平台的优势
+
+- 支付功能
+- 地理位置
+- 自带账号
+- 反向推送
+- 硬件连接
+</script></section><section  data-markdown><script type="text/template">
+## 微信相比 Native APP 的优势
+
+- 用户获取成本低
+- 轻量级开发(mobile h5)
+- 完整的生态环境(支付, 地理位置, 推送等接口)
+- 适用于各个量级的业务
+</script></section><section ><section data-markdown><script type="text/template">
+## 经典案例
+</script></section><section data-markdown><script type="text/template">
+### 招商银行
+
+![](../assets/images/wechat-dev-blueprint/example-bank.jpg)
+</script></section><section data-markdown><script type="text/template">
+### 谁是卧底
+
+![](../assets/images/wechat-dev-blueprint/example-game.jpg)
+</script></section><section data-markdown><script type="text/template">
+### 全民经纪人
+
+![](../assets/images/wechat-dev-blueprint/demo-front.jpg)
+</script></section><section data-markdown><script type="text/template">
+### 全民经纪人
+
+![](../assets/images/wechat-dev-blueprint/demo-admin.jpg)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## 使用微信平台(开发者模式)所需的准备工作
+
+- 公众号
+- 服务器
+</script></section><section data-markdown><script type="text/template">
+### 公众号
+
+微信认证分为资质认证和名称认证两部分，只需要资质认证通过，就可获得接口。
+
+https://mp.weixin.qq.com/wiki/13/8d4957b72037e3308a0ca1b21f25ae8d.html
+
+![](../assets/images/wechat-dev-blueprint/authority.png)
+
+...
+</script></section><section data-markdown><script type="text/template">
+### 服务器
+
+服务器与域名(微信只认80端口)
+
+![](../assets/images/wechat-dev-blueprint/architecture.png)
+</script></section></section><section  data-markdown><script type="text/template">
+## 开发微信应用需要的技术
+
+- 服务端语言任选
+- 前端和 mobile 端 web 无异, 只需要额外的一些 sdk
+</script></section></div>
+		</div>
+
+		<script src="../templates/revealjs/lib/js/head.min.js"></script>
+		<script src="../templates/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../templates/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../templates/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../templates/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../templates/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
