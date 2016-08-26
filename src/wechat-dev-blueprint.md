@@ -1,4 +1,4 @@
-# 微信平台开发蓝皮书
+# 微信公众号开发蓝皮书
 
 author: 马陆骋&lt;malucheng@boohee.com&gt;
 
@@ -107,7 +107,7 @@ author: 马陆骋&lt;malucheng@boohee.com&gt;
 
 ![](../assets/images/wechat-dev-blueprint/demo-admin.jpg)
 
-## 开发微信应用
+## 开发微信公众号应用
 
 ### 可选方式
 
