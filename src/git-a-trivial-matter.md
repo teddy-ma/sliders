@@ -54,7 +54,7 @@ author: 马陆骋&lt;malucheng@boohee.com&gt;
 
 -   直接合并
 -   rebase 合并
--   sqush 合并
+-   squash 合并
 
 ### 直接合并
 
