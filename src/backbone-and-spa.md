@@ -32,51 +32,47 @@ passes model data directly to the view.
 
 single page application
 
-
 ### spa 的优势
 
--   (使用) 用户体验更好
--   (开发) 前后端分离
--   (性能) 请求量少
-
+- (使用) 用户体验更好
+- (开发) 前后端分离
+- (性能) 请求量少
 
 ### spa 的不足
 
--   对SEO支持不是太好
--   首屏加载慢
--   入门门槛高
-
+- 对SEO支持不是太好
+- 首屏加载慢
+- 入门门槛高
 
 ### spa 的适用场景
 
--   应用型而非展示型
--   在大型应用中局部嵌入
+- 应用型而非展示型
+- 在大型应用中局部嵌入
 
 ## 开发体验
 
--   无需关心后台业务逻辑 (只需要和 api 进行交互)
--   统一语言 **javascript**
+- 无需关心后台业务逻辑 (只需要和 api 进行交互)
+- 统一语言 **javascript**
 
 ### 如何开发一个 spa
 
--   编程语言: javascript(coffeescript)
--   构建工具: yeoman(grunt, bower)
--   后端支持: 推荐但不限于 restful 接口
--   本地数据: 数据持久化在浏览器端
+- 编程语言: javascript(coffeescript)
+- 构建工具: yeoman(grunt, bower)
+- 后端支持: 推荐但不限于 restful 接口
+- 本地数据: 数据持久化在浏览器端
 
 ### 编程语言 - javascript
 
--   这里的 javascript 是一门真正的编程语言
--   与操作 dom 时的脚本语言javascript不同
--   是面向对象的 javascript (Object Orient)
+- 这里的 javascript 是一门真正的编程语言
+- 与操作 dom 时的脚本语言javascript不同
+- 是面向对象的 javascript (Object Orient)
 
 ### 编程语言 - coffeescript
 
--   什么是 coffeescript
--   语法简介
+- 什么是 coffeescript
+- 语法简介
 
-![](../assets/images/backbone-and-spa/creator.png)
-
+![creator](../assets/images/backbone-and-spa/creator.png)
 
 ## 什么是 coffeescript
 
@@ -89,8 +85,7 @@ CoffeeScript is a little language that compiles into JavaScript
   opposite = true
 ```
 
--   无需 \`var\`, 默认就是局部变量, 预防不良代码
-
+- 无需 \`var\`, 默认就是局部变量, 预防不良代码
 
 ### 定义方法
 
@@ -99,8 +94,7 @@ square = (x) -> x * x
 cube   = (x) -> square(x) * x
 ```
 
--   减少冗长的 \`function\` 书写
-
+- 减少冗长的 \`function\` 书写
 
 ### 条件分支
 
@@ -116,8 +110,7 @@ grade = (student) ->
 eldest = if 24 > 21 then "Liz" else "Ike"
 ```
 
--   没有各种圆括号和方括号
-
+- 没有各种圆括号和方括号
 
 ### 注释
 
@@ -125,8 +118,7 @@ eldest = if 24 > 21 then "Liz" else "Ike"
 # this is a comment
 ```
 
--   ruby 风格注释
-
+- ruby 风格注释
 
 ### loops
 
@@ -135,19 +127,18 @@ for animal in animals
   console.log animal
 ```
 
--   写过 js 原生循环的都觉得这个爽
+- 写过 js 原生循环的都觉得这个爽
 
 
 ## 构建工具
 
--   yeoman (脚手架)
--   grunt (构建工具)
--   bower (包管理器)
+- yeoman (脚手架)
+- grunt (构建工具)
+- bower (包管理器)
 
 ## install
 
--   use npm
-
+- use npm
 
 ### yo
 
@@ -155,17 +146,15 @@ for animal in animals
 npm install -g yo
 ```
 
-![](../assets/images/backbone-and-spa/yeoman_cli.png)
+![yeoman_cli](../assets/images/backbone-and-spa/yeoman_cli.png)
 
-
-### grunt
+### grunt-cli
 
 ```bash
 npm install -g grunt-cli
 ```
 
-![](../assets/images/backbone-and-spa/grunt_cli.png)
-
+![grunt_cli](../assets/images/backbone-and-spa/grunt_cli.png)
 
 ### bower
 
@@ -173,72 +162,63 @@ npm install -g grunt-cli
 npm install -g bower
 ```
 
-![](../assets/images/backbone-and-spa/bower_cli.png)
+![bower_cli](../assets/images/backbone-and-spa/bower_cli.png)
 
-
-## yoeman
+## Yoeman
 
 THE WEB'S SCAFFOLDING TOOL FOR MODERN WEBAPPS
 
-![](../assets/images/backbone-and-spa/yeoman.png)
+![yeoman](../assets/images/backbone-and-spa/yeoman.png)
 
-
-## grunt
+## Grunt
 
 The JavaScript Task Runner
 
 build tool like rake for ruby and ant(maven) for java
 
-![](../assets/images/backbone-and-spa/grunt.png)
+![grunt](../assets/images/backbone-and-spa/grunt.png)
 
-
-## bower
+## Bower
 
 A package manager for the web
 
-![](../assets/images/backbone-and-spa/bower.png)
+![bower](../assets/images/backbone-and-spa/bower.png)
 
 ## backbone的组成
 
-![](../assets/images/backbone-and-spa/backbone.png)
+![backbone](../assets/images/backbone-and-spa/backbone.png)
 
--   model
--   collection
--   view
--   routes
--   **controller**
-
+- model
+- collection
+- view
+- routes
+- **controller**
 
 ### 架构
 
-![](../assets/images/backbone-and-spa/backbone_mvc.png)
-
+![backbone_mvc](../assets/images/backbone-and-spa/backbone_mvc.png)
 
 ### model
 
 数据结构的载体, 以及与服务端 api 的交互
 
-
 ### collection
 
 模型的集合, 方便开发者对一个以上的模型进行操作
-
 
 ### view
 
 view 是 backbone 的核心组件, 负责事件的绑定和 template 的渲染
 
--   可以嵌套
--   可以继承
--   绑定数据
--   手动管理内存
--   传统 mvc 中 c 的位置
-
+- 可以嵌套
+- 可以继承
+- 绑定数据
+- 手动管理内存
+- 传统 mvc 中 c 的位置
 
 ### controller
 
 backbone 没有专门的 controller, controller 的职责由 view 承担
-
 
 ### route
 
@@ -262,7 +242,6 @@ backbone 没有专门的 controller, controller 的职责由 view 承担
     template_type: ""
 ```
 
-
 ### 手动管理 view
 
 view 需要被手动管理不然会出现多重事件绑定
@@ -270,16 +249,14 @@ view 需要被手动管理不然会出现多重事件绑定
     if window.current_settings_view
       window.current_settings_view.remove() # make sure view events removed
 
-
 ### 忘掉 jQuery
 
 不要用 jQuery 的思想去创建 dom 元素, 要把这些元素绑定到模型,
 这样模型更新时 dom 会自定被更新
 
-
 ## demo
 
-![](../assets/images/backbone-and-spa/wshop_front.png)
+![wshop_front](../assets/images/backbone-and-spa/wshop_front.png)
 
 ## Thanks
 

@@ -4,7 +4,6 @@ the next generation architecture for the new world!
 
 author: 马陆骋 <malucheng@boohee.com>
 
-
 ## 为什么做这次分享
 
 - 拓宽视野，看到不一样的世界。
