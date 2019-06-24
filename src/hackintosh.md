@@ -1,4 +1,4 @@
-# Hackintosh 不折腾指南
+# Hackintosh (黑苹果) 不折腾指南
 
 程序员黑苹果入坑
 
@@ -16,8 +16,6 @@ Any non-Mac system that is made to run the Apple operating system is referred to
 - 家里摆一台苹果台式机没必要
 - 很多程序员不是很精通电脑硬件
 - 国内社区的资料太复杂
-
-![](../assets/images/beyond-rails/new-world.jpg)
 
 ## 免责声明
 
